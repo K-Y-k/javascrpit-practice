@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/typeit@8.3.3/dist/index.umd.js"></script>
+    <title>Document</title>
+    <style>
+      :root {
+        --ti-cursor-margin-left: 0.1em;
+        --ti-cursor-color: dodgerblue;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000000;
+        color: white;
+        font-size: 3rem;
+        font-family: 'Roboto', sans-serif;
+      }
+      h1 {
+        margin-bottom: 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="title">Kyk Youtube</h1>
+
+    <script>
+    // 문서가 모두 로드된 후에 TypeIt 실행
+      document.addEventListener('DOMContentLoaded', () => {
+        new TypeIt('#title') // title 아이디 값을 가져와서 타이핑 효과 적용
+          .pause(1000)       // 1초 대기
+          .delete(7, { delay: 1000 }) // 7글자 삭제 후 1초 대기
+          .type('Academy')   // Academy 입력
+          .go();             
+      });
+
+      
+        // new TypeIt('#hero', {
+        //     speed: 100,
+        //     startDelay: 900,
+        // })
+        // .type("the mot versti", { delay: 400 })
+        // .move(-8, {delay: 100})
+        // .type('s', {delay: 400})
+        // .move(null, { to: 'START', instant: true, delay: 300 })
+        // .move(1, { delay: 200 })
+        // .delete(1)
+        // .type('T', { delay: 225 })
+        // .pause(200)
+        // .move(2, {instant: true})
+        // .pause(200)
+        // .move(5, {instant: true})
+        // .move(5, {delay: 200})
+        // .type('a', {delay: 300})
+        // .move(null, { to: 'END'})
+        // .type(' programming language.')
+        // .go();
+    </script>
+  </body>
+
+</html>

@@ -63,4 +63,14 @@
     const name2 = '';
     const userName2 = name2 ?? 'Guest';
     console.log(userName2); // ''
-}   
+}
+
+
+/* Set 자료구조 */
+const array = [1, 2, 3, 1, 4, 2];
+
+const mySet = new Set(array);
+console.log(mySet);  // Set(4) { 1, 2, 3, 4 }
+
+const myArray = [...mySet];
+console.log(myArray);
